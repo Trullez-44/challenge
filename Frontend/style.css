@@ -1,0 +1,146 @@
+/* ANDY LOGO */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+  }
+  .navbar-brand {
+    font-weight: 900;
+    color: #009970;
+    font-size: 30px;
+    transition: 0.4s color;
+  }
+  /* Login button disable */
+  /* .login-button {
+    background-color: #00b383;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+  } 
+  .login-button:hover {
+    background-color: #009970;
+  } */
+  
+  /* Burger */
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+  }
+  .navbar-toggler:focus,
+  .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  /* LINKS HEADER */
+  .nav-link {
+    color: #666777;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .nav-link:hover {
+    color: #000;
+    font-weight: bolder;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  @media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #009970;
+      visibility: hidden;
+      transition: 0.5s ease-in-out;
+    }
+  
+    .nav-link:hover::before {
+      width: 100%;
+      visibility: visible;
+      transition: 0.3s;
+    }
+  }
+  
+  /* general Container  */
+  .hero-section {
+    background: url(img/happiness.png) no-repeat center;
+    background-size: cover;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  
+    display: flex ;
+    justify-content: center ;
+    align-items: center;
+    
+  }
+  .navbar {
+    background-color: white;
+    height: 80px;
+  }
+  
+  /*
+    .hero-section::before {
+      background-color: rgba(0, 0, 0, 0.8);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  
+    */
+  /* .containerCard {
+     valor original 100vh, pero lo cambie para que no se salgan las cards
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 1800px;
+  }
+   */
+  /* .container {
+    width: 100%;
+    max-width: 350px; 
+    height: 250px;
+    background-color: #041130;
+    margin: 10px; 
+    padding: 10px; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  .container >img {
+    border-radius:1000%;
+      width: 200px;
+      height:200px;  
+  } */
