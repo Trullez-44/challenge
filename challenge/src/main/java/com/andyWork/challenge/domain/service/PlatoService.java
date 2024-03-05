@@ -23,7 +23,7 @@ public class PlatoService {
         return platoRepository.findAll();
     }
 
-    public Plato getById(Integer id ){
+    public Plato getById(Integer id) {
         return platoRepository.findById(id).orElse(null);
     }
 
@@ -36,8 +36,19 @@ public class PlatoService {
 
         platoRepository.deleteById(id);
     }
-    
+
     public void updatePlato(Plato plato) {
-        platoRepository.save(plato);
+        Plato platoExist = platoRepository.findById(plato.getPlatoId()).orElse(null);
+        if (platoExist != null) {
+            platoExist.setNombre(plato.getNombre());
+            platoExist.setDescripcion(plato.getDescripcion());
+            platoExist.setPrecio(plato.getPrecio());
+            platoRepository.save(platoExist);
+        }
+        else {
+            throw new Error("El plato no existe sapa");
+        }
+
+
     }
 } 

@@ -9,7 +9,7 @@ import com.andyWork.challenge.persistence.entity.Plato;
 import java.util.List;
 
 @RestController
-// @RequestMapping("/api/platos")
+ @RequestMapping("/api/platos")
 public class PlatoController {
     
     @Autowired
@@ -19,24 +19,28 @@ public class PlatoController {
         this.platoService = platoService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Plato getPlatoById(@PathVariable Integer id) {
         return platoService.getById(id);
     }
 
-    @GetMapping("/platos")
+    @GetMapping()
     public List<Plato> getAllPlatos() {
         return platoService.getAll();
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public void addPlato(@RequestBody Plato plato) {
         platoService.savePlato(plato);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deletePlato(@PathVariable Integer id) {
         platoService.deletePlato(id);
     }
 
+    @PutMapping("/update")
+    public void updatePlato(@RequestBody Plato plato){
+        platoService.updatePlato(plato);
+    }
 }
