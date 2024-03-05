@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
  @RequestMapping("/api/platos")
+@CrossOrigin("*")
 public class PlatoController {
     
     @Autowired
